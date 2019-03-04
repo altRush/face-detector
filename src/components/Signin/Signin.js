@@ -18,7 +18,7 @@ class Signin extends React.Component {
   };
 
   onSubmitSignIn = () => {
-    fetch('https://shrouded-lowlands-58508.herokuapp.com/signin', {
+    fetch('https://wp-face-detector.herokuapp.com/signin', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -38,11 +38,17 @@ class Signin extends React.Component {
   render() {
     const { onRouteChange } = this.props;
     return (
-      <article className="br3 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
+      <article
+        style={{ backgroundColor: '#a3a3a382' }}
+        className="br3 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center"
+      >
         <main className="pa4 black-80">
           <div className="measure">
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-              <legend className="f1 fw6 ph0 mh0">Face Detector</legend>
+              <legend className="f1  ph0 mh0">
+                <span className="fw6">FACE </span>[
+                <span style={{ color: 'white' }}>D</span>]etector
+              </legend>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="email-address">
                   Email

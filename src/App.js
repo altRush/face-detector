@@ -12,10 +12,10 @@ import './App.css';
 const particlesOptions = {
   particles: {
     number: {
-      value: 6,
+      value: 33,
       density: {
-        enable: true,
-        value_area: 800
+        enable: false,
+        value_area: 868.1035095057337
       }
     },
     color: {
@@ -37,7 +37,7 @@ const particlesOptions = {
       }
     },
     opacity: {
-      value: 0.3,
+      value: 0.21307995233322555,
       random: true,
       anim: {
         enable: false,
@@ -47,7 +47,7 @@ const particlesOptions = {
       }
     },
     size: {
-      value: 78.91850086415761,
+      value: 63.134800691326085,
       random: false,
       anim: {
         enable: true,
@@ -177,7 +177,7 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch('https://shrouded-lowlands-58508.herokuapp.com/imageurl', {
+    fetch('https://wp-face-detector.herokuapp.com/imageurl', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -187,7 +187,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://shrouded-lowlands-58508.herokuapp.com/image', {
+          fetch('https://wp-face-detector.herokuapp.com/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

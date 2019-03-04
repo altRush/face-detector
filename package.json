@@ -1,6 +1,6 @@
 {
-  "name": "facerecognitionbrain",
-  "version": "0.1.0",
+  "name": "facedetector",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "clarifai": "^2.7.1",
@@ -16,5 +16,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/altRush/face-detector.git",
+  "author": "Rush WP <rushing.wp@gmail.com>",
+  "license": "MIT"
 }
